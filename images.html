@@ -11,12 +11,14 @@
   >
     <div>
       <p>images example</p>
+      <!-- eager loading instructs browsers to immediately load images -->
       <img
         src="imgs/aaron-paul.jpg"
         alt="aaron paul image in early 2000s"
         title="Arron Paul"
         width="200"
         height="200"
+        loading="eager"
       />
 
       <img
@@ -25,6 +27,7 @@
         title="Kurapika"
         width="200"
         height="200"
+        loading="eager"
       />
 
       <img
@@ -33,6 +36,7 @@
         title="Kuzan"
         width="200"
         height="200"
+        loading="eager"
       />
 
       <img
@@ -41,6 +45,7 @@
         title="Saul Goodman"
         width="200"
         height="200"
+        loading="eager"
       />
 
       <img
@@ -49,6 +54,7 @@
         title="Wonder Of U"
         width="200px"
         height="200px"
+        loading="eager"
       />
     </div>
 
@@ -74,12 +80,24 @@
       <p>image from an absolute link</p>
       <img
         src="https://i.chzbgr.com/full/10385431808/hC3252FF1/p-wholesomebeancat"
+        title="silly cat"
         alt="image from internet"
         width="10%"
+        loading="auto"
       />
     </div>
 
     <p>Example of an Image that faild to load:</p>
     <img src="xyz" alt="failed image" />
+
+    <div>
+      <p>load images using lazy loading</p>
+      <!--use lazy loading for images that don't show uo in the view port-->
+      <img src="/imgs/cat-studying.jpg" alt="cat" width="10%" loading="lazy" />
+
+      <img src="/imgs/cat-studying.jpg" alt="cat" width="10%" loading="lazy" />
+
+      <img src="/imgs/cat-studying.jpg" alt="cat" width="10%" loading="lazy" />
+    </div>
   </body>
 </html>
