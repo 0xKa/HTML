@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Practice2</title>
+    <title>Index</title>
   </head>
   <body
     style="
@@ -16,9 +16,9 @@
   >
     <div
       id="navigator"
-      style="width: 20%; border-right: 1px solid #ccc; margin-left: 10px"
+      style="width: 20%; border-right: 2px solid #ccc; margin-left: 10px"
     >
-      <h2>All Pages</h2>
+      <h2>Navigator</h2>
       <a href="./01-images.html" target="contentFrame">01-images.html</a><br />
       <a href="./02-iframe.html" target="contentFrame">02-iframe.html</a><br />
       <a href="./03-Hyperlinks.html" target="contentFrame">03-Hyperlinks.html</a
@@ -27,12 +27,18 @@
 
     <div
       id="content"
-      style="width: 100%; border: none; margin-left: 10px; margin-right: 5px"
+      style="
+        width: 100%;
+        height: 85%;
+        border: none;
+        margin-left: 10px;
+        margin-right: 5px;
+      "
     >
       <h2 align="center">Page</h2>
       <iframe
         name="contentFrame"
-        src="./01-images.html"
+        src="README.md"
         style="width: 100%; height: 100%; border: 1px solid black"
       ></iframe>
     </div>

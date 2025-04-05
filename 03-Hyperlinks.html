@@ -32,7 +32,7 @@
           target="_self"
           >Youtube</a
         >
-        in the same tab
+        in the same tab (_self)
       </p>
       <p>
         click here to open<a
@@ -41,7 +41,25 @@
           target="_blank"
           >Youtube</a
         >
-        in a new tab
+        in a new tab (_blank)
+      </p>
+      <p>
+        click here to open<a
+          href="https://www.Youtube.com"
+          title="open YouTube"
+          target="_parent"
+          >Youtube</a
+        >
+        in a Parent Container (_parent)
+      </p>
+      <p>
+        click here to open<a
+          href="https://www.Youtube.com"
+          title="open YouTube"
+          target="_top"
+          >Youtube</a
+        >
+        in the Root Parent Container (_top)
       </p>
       <p>
         click here to open a Relative Path
@@ -99,6 +117,23 @@
       <a href="imgs/cat-coding.jpg" title="open img path" target="_blank"
         ><img src="imgs/cat-coding.jpg" alt="cat link" width="200"
       /></a>
+    </div>
+
+    <div>
+      <hr />
+      <p>using < button></p>
+
+      <button onclick="window.location.href='https:\\www.YouTube.com'">
+        Open YouTube using window.location.href</button
+      ><br />
+      <button onclick="window.open('https:\\www.YouTube.com', '_blank')">
+        Open YouTube using window.open()</button
+      ><br />
+      <button
+        onclick="window.open('https:\\www.YouTube.com', '_blank', 'width=1000,height=500')"
+      >
+        Open YouTube using window.open() with custom dimensions</button
+      ><br />
     </div>
   </body>
 </html>
