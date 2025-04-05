@@ -6,9 +6,9 @@
     <title>Hyperlinks</title>
   </head>
   <body
-    style="background-color: rgb(15, 15, 15); color: white; font-size: 25px"
+    style="background-color: rgb(15, 15, 15); color: white; font-size: 20px"
   >
-    <div>
+    <div id="top">
       <pre>
 <h3>Introduction</h3>
     • Hyperlinks, or links, are fundamental to the web. They connect various resources, 
@@ -24,7 +24,7 @@
 
     <div>
       <hr />
-      <p>Hyperlink example</p>
+      <h3>Hyperlink examples</h3>
       <p>
         click here to open<a
           href="https://www.Youtube.com"
@@ -45,18 +45,56 @@
       </p>
       <p>
         click here to open a Relative Path
-        <a href="01-images.html" title="open html page" target="_blank"
+        <a href="./01-images.html" title="open html page" target="_blank"
           >html page</a
         >
         in a new tab
       </p>
+      <p>
+        open a file on pc:
+        <a href="../../../../myCV.pdf" title="pdf file" target="_blank"
+          >pdf file</a
+        >
+      </p>
+      <p>
+        Link to the
+        <a href="\" title="root dir" target="_blank">Root Directory</a>
+      </p>
+
+      <p>
+        Sending Email To:
+        <a href="mailto:example@gamil.com" title="sending email" target="_blank"
+          >example@gamil.com</a
+        >
+      </p>
+      <p>
+        Sending Email To and providing (cc, bcc, subject, and body):
+        <a
+          href="mailto:example@example.com?cc=another@example.com&bcc=secret@example.com&subject=Greetings&body=Hi there,"
+          >Send a Detailed Email</a
+        >
+      </p>
+      <p>
+        Linking to Phone number:
+        <a href="tel:+1234567890" title="Call Us Now">Call Us</a>
+      </p>
+      <p>
+        Linking to a file to download it:
+        <a href="./imgs/cat-studying.jpg" download="sample-name">jpg file</a>,
+        <a href="./misc/dummy.pdf" download>pdf file</a>
+      </p>
+      <p>
+        Book Marks (Internal Links)
+        <a href="#images">Go to images</a>,
+        <a href="#top">Go to top</a>
+      </p>
     </div>
 
-    <div align="center">
+    <div align="center" id="images">
       <hr />
       <p>Use an Image as a Link</p>
       <a href="https://www.Youtube.com" title="open YouTube" target="_blank"
-        ><img src="imgs/cat-coding.jpg" alt="cat link" width="200"
+        ><img src="./imgs/cat-coding.jpg" alt="cat link" width="200"
       /></a>
       <a href="imgs/cat-coding.jpg" title="open img path" target="_blank"
         ><img src="imgs/cat-coding.jpg" alt="cat link" width="200"
