@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Lists</title>
+  </head>
+  <body
+    style="background-color: rgb(15, 15, 15); color: white; font-size: 20px"
+  >
+    <div id="top">
+      <pre>
+    <h3>Unorderd Lists</h3>
+        - In HTML, an unordered list is created with the &lt;ul&gt; tag.
+        - Each item within the list is marked up with an &lt;li&gt; (list item) tag.
+        - The default visual representation of an unordered list is a bullet point for each item.
+      </pre>
+      <u>Example1</u>
+      <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+      </ul>
+
+      <u>Example2</u>
+      <ul style="list-style-type: square">
+        <li>
+          item1
+          <ul>
+            <li>item1.1</li>
+            <li>item1.2</li>
+            <li>item1.3</li>
+          </ul>
+        </li>
+        <li>item2</li>
+        <ul>
+          <li>item2.1</li>
+          <li>
+            item2.2
+            <ul>
+              <li>item2.2.1</li>
+            </ul>
+          </li>
+          <li>item2.3</li>
+        </ul>
+        <li>item3</li>
+      </ul>
+
+      <pre>
+      <h3>Orderd Lists</h3>
+        - Ordered List: The &lt;ol&gt; tag is used to define an ordered list in HTML.
+        - Items within the list are automatically numbered by the browser,
+             which helps in indicating a clear order or sequence.
+        - The numbering can be customized with different styles such as numeric,
+             alphabetical, or Roman numerals.
+    </pre>
+      <u>Example1</u>
+      <ol>
+        <li>
+          item1
+          <ul>
+            <li>item1.1</li>
+            <li>item1.2</li>
+          </ul>
+        </li>
+        <li>
+          item2
+          <ol type="a">
+            <li>item2.1</li>
+            <li>
+              <a href="https://www.github.com/0xKa" target="_blank"
+                >github/0xKa</a
+              >
+            </li>
+            <li>item2.3</li>
+            <li>item2.4</li>
+          </ol>
+        </li>
+        <li>item3</li>
+      </ol>
+      <u>Example2</u>
+      <ol style="list-style-type: upper-roman">
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+      </ol>
+
+      <pre>
+    <h3>Description Lists</h3>
+    - Description List: The &lt;dl&gt; tag in HTML defines a description list.
+    - Unlike ordered (&lt;ol&gt;) and unordered (&lt;ul&gt;) lists, 
+        description lists consist of a series of terms and their corresponding descriptions.
+    - Components:
+        &lt;dt&gt; (Description Term): This tag is used to indicate the term being described.
+        &lt;dd&gt; (Description Details): This tag provides the details or the description of the term.
+    </pre>
+
+      <u>Glossary of Terms Example:</u>
+      <dl>
+        <dt>HTML</dt>
+        <dd>
+          Hypertext Markup Language, the standard markup language used to create
+          web pages.
+        </dd>
+        <dt>CSS</dt>
+        <dd>
+          Cascading Style Sheets, a stylesheet language used to describe the
+          presentation of a document written in HTML.
+        </dd>
+        <dt>JS</dt>
+        <dd>JavaScript</dd>
+      </dl>
+
+      <br />
+      <b>Tech Specifications:</b>
+      <dl>
+        <dt>Processor</dt>
+        <dd>Intel Core i7-9750H, six-core, 12 MB cache, up to 4.5 GHz</dd>
+        <dt>Memory</dt>
+        <dd>16GB DDR4 2666MHz</dd>
+        <dt>Storage</dt>
+        <dd>512GB PCIe NVMe SSD</dd>
+      </dl>
+    </div>
+  </body>
+</html>
