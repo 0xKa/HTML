@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+    <style>
+      h1 {
+        color: #ececec;
+      }
+      form {
+        background: #444444;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 95%;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        font-weight: bold;
+        display: block;
+      }
+      input,
+      select,
+      textarea {
+        width: 90%;
+        padding: 8px;
+        margin-top: 5px;
+      }
+      button {
+        padding: 10px 15px;
+      }
+    </style>
+  </head>
+  <body
+    style="background-color: rgb(15, 15, 15); color: white; font-size: 20px"
+  >
+    <div id="top">
+      <h1>&lt;form&gt; Tag and Inputs - Dark Theme Example</h1>
+      <p>
+        The <code>&lt;form&gt;</code> element allows user input submission.
+        Below, inputs are grouped using <code>&lt;fieldset&gt;</code> and
+        labeled with <code>&lt;legend&gt;</code>.
+      </p>
+      <p>
+        Key attributes that configure the form element's functionality include:
+      </p>
+      <ul>
+        <li>
+          action: Specifies the URL of the server script that handles the form
+          data after submission.
+        </li>
+        <li>
+          method: Defines the HTTP method used to send the form data (GET or
+          POST).
+        </li>
+        <li>
+          enctype: Specifies how the form data should be encoded when sending to
+          the server. Common values include application/x-www-form-urlencoded,
+          multipart/form-data (for file uploads), and text/plain.
+        </li>
+      </ul>
+
+      <p>method attribute: GET vs POST:</p>
+      <b>GET:</b>
+      <p>
+        Description: Data is appended to the URL as a query string and visible
+        to anyone. It has a length limitation and should not be used for
+        sensitive information.
+      </p>
+      <p>
+        Use Cases: Suitable for form submissions where the data does not include
+        sensitive information, such as search filters or query parameters.
+      </p>
+      <b>POST:</b>
+      <p>
+        Description: Data is sent through the HTTP header, so the information is
+        not displayed in the URL. This method allows sending large quantities of
+        data and is secure for sensitive information.
+      </p>
+      <p>
+        Use Cases: Ideal for updating data, sending sensitive information (like
+        passwords), and for any form that results in a change of state or data
+        manipulation on the server.
+      </p>
+
+      <form action="/submit.php.asp.xyz" method="GET">
+        <fieldset>
+          <legend>Basic Inputs</legend>
+
+          <div class="form-group">
+            <label for="text">Text:</label>
+            <input type="text" id="text" name="text" placeholder="Enter text" />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="number">Number:</label>
+            <input type="number" id="number" name="number" min="1" max="100" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Date & Time</legend>
+
+          <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" />
+          </div>
+
+          <div class="form-group">
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Other Inputs</legend>
+
+          <div class="form-group">
+            <label for="color">Color Picker:</label>
+            <input type="color" id="color" name="color" />
+          </div>
+
+          <div class="form-group">
+            <label for="range">Range (0-100):</label>
+            <input type="range" id="range" name="range" min="0" max="100" />
+          </div>
+
+          <div class="form-group">
+            <label for="url">URL:</label>
+            <input
+              type="url"
+              id="url"
+              name="url"
+              placeholder="https://example.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="tel">Telephone:</label>
+            <input type="tel" id="tel" name="tel" placeholder="123-456-7890" />
+          </div>
+
+          <div class="form-group">
+            <label for="file">Upload File:</label>
+            <input type="file" id="file" name="file" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Options</legend>
+
+          <div class="form-group">
+            <label>Checkbox:</label>
+            <input type="checkbox" id="check1" name="check1" value="yes" />
+            <label for="check1">Accept Terms</label>
+          </div>
+
+          <div class="form-group">
+            <label>Radio:</label>
+            <input
+              type="radio"
+              id="radio1"
+              name="gender"
+              value="male"
+              checked
+            />
+            <label for="radio1">Male</label>
+            <input type="radio" id="radio2" name="gender" value="female" />
+            <label for="radio2">Female</label>
+          </div>
+
+          <div class="form-group">
+            <label for="select">Select an Option:</label>
+            <select id="select" name="select">
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="textarea">Textarea:</label>
+            <textarea
+              id="textarea"
+              name="textarea"
+              rows="4"
+              placeholder="Write something..."
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Hidden input -->
+        <input type="hidden" name="token" value="123456" />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
