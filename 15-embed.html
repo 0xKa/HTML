@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML &lt;embed&gt;</title>
+  </head>
+  <body
+    style="background-color: rgb(15, 15, 15); color: white; font-size: 20px"
+  >
+    <div id="top">
+      <h1>Demonstration of Various Embedded Content Types</h1>
+
+      <!--
+     The <embed> element is an HTML tag used to embed external content such as applications, interactive content, or multimedia (like PDFs, videos, and audio files) directly into web pages.
+    
+        Purpose of the <embed> Element:
+            The <embed> element allows web developers to integrate external multimedia elements and other content into HTML documents.
+            It supports various types of content, including Flash, QuickTime, and Acrobat files, among others. 
+    -->
+
+      <!-- Embedding an image -->
+      <h2>Embedded Image</h2>
+      <embed
+        src="./imgs/aaron-paul-large.jpg"
+        type="image/jpeg"
+        width="600"
+        height="400"
+      />
+
+      <!-- Embedding a PDF document -->
+      <h2>Embedded PDF Document</h2>
+      <embed
+        src="./misc/dummy.pdf"
+        type="application/pdf"
+        width="600"
+        height="500"
+      />
+
+      <!-- Embedding an HTML document -->
+      <h2>Embedded HTML Document</h2>
+      <embed src="./01-images.html" type="text/html" width="600" height="400" />
+
+      <p>
+        This webpage is a demonstration of how to use the HTML embed tag to
+        include various types of media and applications directly into a web
+        page. Each embedded element is provided with appropriate dimensions and
+        a MIME type to ensure proper handling by the browser.
+      </p>
+      <p>also, can use &lt;object&gt; tag, look up the differences</p>
+    </div>
+  </body>
+</html>
