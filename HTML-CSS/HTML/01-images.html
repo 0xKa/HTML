@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<!-- 
+
+
+  - JPEG (Joint Photographic Experts Group)
+      Use Case: Best for photographs and realistic images with smooth variations in color and tone.
+      Strengths: Offers good compression that balances quality and file size, widely supported.
+      Limitations: Lossy compression can degrade quality with high compression levels; does not support transparency.
+
+  - PNG (Portable Network Graphics)
+      Use Case: Ideal for images that require transparency or images with text, sharp edges, and logos.
+      Strengths: Lossless compression; supports transparency (alpha channel).
+      Limitations: Larger file sizes compared to JPEG for high-color images like photographs.
+
+  - GIF (Graphics Interchange Format)
+      Use Case: Suitable for simple icons and animations.
+      Strengths: Supports animations and transparency.
+      Limitations: Limited to 256 colors, which makes it unsuitable for color-rich images.
+
+  - WebP
+      Use Case: A modern format designed to provide superior lossless and lossy compression for images on the web.
+      Strengths: Supports transparency and animation; can provide 25% to 34% better compression than JPEG and PNG, resulting in faster downloads and less data consumption.
+      Limitations: Not fully supported in all browsers, but support is growing.
+  
+  - SVG (Scalable Vector Graphics)
+      Use Case: Best for logos, icons, and other designs that require scalability without loss of quality.
+      Strengths: Vector format, which means it remains crisp and clear at any resolution or zoom level; can be manipulated with CSS and JavaScript.
+      Limitations: More complex to create than raster images; not ideal for complex images like photographs.
+
+      
+      
+      --  --
+
+
+    Conclusion:
+
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images Practice</title>
+  </head>
+
+  <body
+    style="background-color: rgb(25, 25, 25); color: white; font-size: 15px"
+  >
+    <div>
+      <h1>Recommended Image Formats for Webpages</h1>
+
+      <h2>Key Image Formats for Web Development:</h2>
+      <pre>
+  - JPEG (Joint Photographic Experts Group)
+      Use Case: Best for photographs and realistic images with smooth variations in color and tone.
+      Strengths: Offers good compression that balances quality and file size, widely supported.
+      Limitations: Lossy compression can degrade quality with high compression levels; does not support transparency.
+
+  - PNG (Portable Network Graphics)
+      Use Case: Ideal for images that require transparency or images with text, sharp edges, and logos.
+      Strengths: Lossless compression; supports transparency (alpha channel).
+      Limitations: Larger file sizes compared to JPEG for high-color images like photographs.
+
+  - GIF (Graphics Interchange Format)
+      Use Case: Suitable for simple icons and animations.
+      Strengths: Supports animations and transparency.
+      Limitations: Limited to 256 colors, which makes it unsuitable for color-rich images.
+
+  - WebP
+      Use Case: A modern format designed to provide superior lossless and lossy compression for images on the web.
+      Strengths: Supports transparency and animation; can provide 25% to 34% better compression than JPEG and PNG, 
+      resulting in faster downloads and less data consumption.
+      Limitations: Not fully supported in all browsers, but support is growing.
+  
+  - SVG (Scalable Vector Graphics)
+      Use Case: Best for logos, icons, and other designs that require scalability without loss of quality.
+      Strengths: Vector format, which means it remains crisp and clear at any resolution or zoom level; 
+      can be manipulated with CSS and JavaScript.
+      Limitations: More complex to create than raster images; not ideal for complex images like photographs.
+
+      </pre>
+
+      <h2>Best Practices for Using Image Formats</h2>
+      <pre>
+      - Optimize Images: Always optimize images for the web to reduce file size without compromising quality. 
+      Tools like Adobe Photoshop, GIMP, and online optimizers can be used.
+
+      - Choose Format Based on Need: Select image formats based on the specific needs of the content. 
+      Use JPEG for complex images with many colors, 
+      PNG for images requiring transparency, 
+      WebP for a balance of quality and performance where supported, 
+      SVG for scalable images like logos, and 
+      GIF for simple animations.
+
+      - Test for Compatibility: Ensure that the chosen image formats are compatible with all target browsers and devices. 
+      Consider providing fallbacks for formats like WebP if targeting browsers that do not support it.
+
+      - Lazy Loading: Implement lazy loading for images to improve page load times and conserve bandwidth, 
+      especially for image-heavy pages.
+
+      </pre>
+
+      <h2>Conclusion</h2>
+      <pre>
+        Understanding the strengths and limitations of each image format allows web developers to make informed decisions 
+        that optimize website performance and user experience. 
+        By choosing the right format for the right task, developers can significantly improve the efficiency of webpages.
+      </pre>
+    </div>
+
+    <div>
+      <hr />
+      <p>images example</p>
+      <!-- eager loading instructs browsers to immediately load images -->
+      <img
+        src="imgs/aaron-paul.jpg"
+        alt="aaron paul image in early 2000s"
+        title="Aaron Paul"
+        width="200"
+        height="200"
+        loading="eager"
+      />
+
+      <img
+        src="imgs/Kurapika.jpg"
+        alt="kurapika image"
+        title="Kurapika"
+        width="200"
+        height="200"
+        loading="eager"
+      />
+
+      <img
+        src="imgs/kuzan.jpg"
+        alt="kuzan image"
+        title="Kuzan"
+        width="200"
+        height="200"
+        loading="eager"
+      />
+
+      <img
+        src="imgs/saul-goodman.jpg"
+        alt="Saul Goodman image"
+        title="Saul Goodman"
+        width="200"
+        height="200"
+        loading="eager"
+      />
+
+      <img
+        src="imgs/wonder-of-u.jpg"
+        alt="Wonder Of U image"
+        title="Wonder Of U"
+        width="200px"
+        height="200px"
+        loading="eager"
+      />
+    </div>
+
+    <div>
+      <hr />
+      <p>good aspect ratio vs bad aspect ratio example</p>
+      <!--will automatically set height based of the width to maintain the aspect ratio-->
+      <img
+        src="imgs/cat-coding.jpg"
+        alt="cat-coding"
+        title="cat-coding"
+        style="width: 25%; height: auto"
+      />
+      <!--wrong aspect ratio example-->
+      <img
+        src="imgs/cat-coding.jpg"
+        alt="cat-coding"
+        title="cat-coding"
+        style="width: 25%; height: 200px"
+      />
+    </div>
+
+    <div>
+      <hr />
+      <p>image from an absolute link</p>
+      <img
+        src="https://i.chzbgr.com/full/10385431808/hC3252FF1/p-wholesomebeancat"
+        title="silly cat"
+        alt="image from internet"
+        width="10%"
+        loading="auto"
+      />
+    </div>
+
+    <div>
+      <hr />
+      <p>Example of an Image that faild to load:</p>
+      <img src="xyz" alt="failed image" />
+    </div>
+    <div>
+      <hr />
+      <p>load images using lazy loading</p>
+      <!--use lazy loading for images that don't show uo in the view port-->
+      <img src="imgs/cat-studying.jpg" alt="cat" width="10%" loading="lazy" />
+
+      <img src="imgs/cat-studying.jpg" alt="cat" width="10%" loading="lazy" />
+
+      <img src="imgs/cat-studying.jpg" alt="cat" width="10%" loading="lazy" />
+    </div>
+
+    <div>
+      <hr />
+      <p>Image with different sizes</p>
+      <img src="imgs/aaron-paul-small.jpg" alt="Aaron" />
+      <img src="imgs/aaron-paul-medium.jpg" alt="Aaron" />
+      <img src="imgs/aaron-paul-large.jpg" alt="Aaron" />
+    </div>
+
+    <div>
+      <hr />
+      <p>Responsive Image Example Using srcset</p>
+
+      <!-- 
+        srcset: Provides a list of alternative images for the browser.
+          - Each image is listed with a width descriptor (e.g., 320w, 540w, 750w).
+          - The browser chooses the best image to download based on screen size and resolution.
+
+        sizes: Defines how much space (in CSS pixels) the image will take in different viewport sizes.
+          - This helps the browser choose the best image from srcset before downloading.
+      
+        Summary: 
+          - The browser selects the most appropriate image from srcset based on the viewport size and pixel density.
+          - Example: A desktop might need a high-resolution image, while a mobile device may need a smaller one.
+      -->
+      <img
+        src="imgs/aaron-paul.jpg"
+        srcset="
+          imgs/aaron-paul-small.jpg  320w,
+          imgs/aaron-paul-medium.jpg 540w,
+          imgs/aaron-paul-large.jpg  750w
+        "
+        sizes="
+        (max-width: 600px) 300px,
+        (max-width: 900px) 500px,
+        700px
+        "
+        alt="Aaron Responsive"
+      />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IFrame</title>
+  </head>
+  <body
+    style="background-color: rgb(40, 40, 40); color: white; font-size: 20px"
+  >
+    <div>
+      <pre>
+<h3>introduction</h3>
+    • The iframe (Inline Frame) is an HTML element that allows you to embed another 
+      HTML document within the current document.
+    • An HTML iframe is used to display a web page within a web page.
+    • This functionality is particularly useful for embedding content such as 
+      videos, maps, or a web page within a web page.
+
+<h3>What is iFrame?</h3>
+    • Definition: An iframe is used to embed another HTML page within a parent HTML page.
+    • It creates a nested browsing context, 
+      effectively making it a window within the parent page.
+    • Use Cases: Common uses of iframe include embedding third-party content like 
+      videos, Google Maps, or advertisements, without affecting the rest of the webpage.
+
+<h3>Best Practices</h3>
+    • Accessibility: Provide a meaningful title attribute for each iframe to improve 
+      accessibility for users with screen readers.
+    • Performance: Be cautious with the number of iframes as they 
+      can significantly affect page load time and performance.
+    • Styling: Use CSS to style iframes (e.g., borders, size) 
+      rather than deprecated HTML attributes like frameborder.
+
+    </pre>
+    </div>
+    <div>
+      <hr />
+      <p><u>Images with border within iframe</u></p>
+      <iframe
+        src="imgs/cat-studying.jpg"
+        loading="lazy"
+        frameborder="0"
+        width="590px"
+        style="border: 10px solid rgb(255, 0, 0)"
+        title="cat"
+      ></iframe>
+      <iframe
+        src="imgs/cat-coding.jpg"
+        loading="lazy"
+        frameborder="0"
+        width="590px"
+        style="border: 10px solid rgb(255, 0, 0)"
+        title="cat"
+      ></iframe>
+    </div>
+    <div>
+      <hr />
+      <p><u>html page within iframe</u></p>
+      <iframe
+        src="01-images.html"
+        frameborder="1000px"
+        width="1000px"
+        height="500px"
+      ></iframe>
+    </div>
+    <div>
+      <hr />
+      <p><u>Youtube video within iframe</u></p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/jNQXAC9IVRw?si=j1vF9u4ysOqYZjIK"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div>
+      <hr />
+      <p><u>the README.md file within iframe</u></p>
+      <iframe
+        src="README.md"
+        loading="lazy"
+        frameborder="0"
+        width="100%"
+        height="100%"
+      ></iframe>
+    </div>
+    <div>
+      <hr />
+      <p><u>Using the srcdoc Attribute with < iframe></u></p>
+      <iframe
+        srcdoc="<p>inline html paragraph whithin the iframe</p>"
+        loading="lazy"
+        frameborder="0"
+      ></iframe>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Entities</title>
+  </head>
+  <body
+    style="background-color: rgb(15, 15, 15); color: white; font-size: 20px"
+  >
+    <div id="top">
+      <h1>&lt;canvas&gt; element</h1>
+      <p>Core Concepts:</p>
+      <ul>
+        <li>What is &lt;canvas&gt;?</li>
+        <ul>
+          <li>
+            The &lt;canvas&gt; element is a part of HTML5 that provides a
+            drawable region defined in HTML code with width and height
+            attributes. It can be used for drawing graphics, animations, or
+            complex photo compositions dynamically using JavaScript.
+          </li>
+        </ul>
+        <li>Key Attributes</li>
+        <ul>
+          <li>width: Defines the width of the canvas area.</li>
+          <li>height: Defines the height of the canvas area.</li>
+          <li>
+            These attributes determine the size of the drawing area on the web
+            page.
+          </li>
+        </ul>
+        <li>Getting Started with &lt;canvas&gt;</li>
+        <ul>
+          <li>
+            The &lt;canvas&gt; element itself is not visible. It merely provides
+            a drawing surface. Graphics are drawn on the canvas using
+            JavaScript.
+          </li>
+        </ul>
+      </ul>
+    </div>
+    <hr />
+    <div>
+      <h2>Example1</h2>
+      <canvas
+        id="myCanvas"
+        width="200"
+        height="100"
+        style="border: 1px solid #000000"
+      >
+      </canvas>
+      <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 200, 100);
+      </script>
+    </div>
+    <hr />
+    <div>
+      <h2>Example2</h2>
+      <canvas
+        id="myCanvas"
+        width="200"
+        height="200"
+        style="border: 1px solid #000000"
+      >
+      </canvas>
+      <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(100, 100, 50, 0, 2 * Math.PI); // Circle centered at (100,100) with radius 50
+        ctx.stroke();
+      </script>
+    </div>
+    <hr />
+    <div>
+      <h2>Example3</h2>
+      <canvas
+        id="animationCanvas"
+        width="500"
+        height="500"
+        style="border: 1px solid #000000"
+      >
+      </canvas>
+      <script>
+        var canvas = document.getElementById("animationCanvas");
+        var ctx = canvas.getContext("2d");
+        var x = canvas.width / 2;
+        var y = canvas.height - 30;
+        var dx = 2;
+        var dy = -2;
+        var ballRadius = 10;
+
+        function drawBall() {
+          ctx.beginPath();
+          ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+          ctx.fillStyle = "#0095DD";
+          ctx.fill();
+          ctx.closePath();
+        }
+
+        function animate() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height); // Clears the canvas
+          drawBall();
+          if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+            dx = -dx; // Change direction
+          }
+          if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+            dy = -dy; // Change direction
+          }
+          x += dx;
+          y += dy;
+          requestAnimationFrame(animate); // Recreate animation
+        }
+
+        animate(); // Start the animation
+      </script>
+    </div>
+    <hr />
+  </body>
+</html>

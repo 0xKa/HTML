@@ -1,0 +1,181 @@
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+/* :root {
+  font-family: sans-serif;
+  font-size: 20px;
+  margin: 0 20vw;
+} */
+
+p {
+  color: rgb(0, 0, 0);
+  background-color: #f36d6d8e;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #9c9c9c;
+
+  background-size: 200px;
+  background-image: url("./imgs/cat-pixel-art.png");
+  background-repeat: repeat-y; /* Try: repeat, repeat-x, repeat-y, no-repeat */
+  background-position: top right; /* Try: top, bottom, left, right, center */
+  background-attachment: scroll; /* Try: scroll, fixed, local */
+}
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+main {
+  padding: 20px;
+}
+section {
+  margin-bottom: 20px;
+}
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+table {
+  /* padding: 5px; */
+  margin: 10px;
+  border: 5px solid;
+}
+
+th {
+  padding: 10px;
+  background-color: rgb(214, 214, 214);
+  border: rgb(80, 80, 80) solid;
+}
+
+td {
+  padding: 20px;
+  border: rgb(80, 80, 80) solid;
+}
+
+.simple-highlight {
+  background-color: yellow;
+  padding: 0.1em 0.2em;
+}
+
+.bg-image {
+  height: 400px;
+  border: 2px solid #333;
+  padding: 20px;
+  color: white;
+
+  /* Background image settings to play with: */
+  background-image: url("https://images.unsplash.com/photo-1465101162946-4377e57745c3?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2FsYXh5JTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+.border-demo {
+  border-width: 4px;
+  border-style: solid; /* Try: solid, dashed, dotted, double, groove, ridge, inset, outset, none */
+  border-color: #3498db; /* Try different colors or use border-top-color, etc. */
+
+  /* Individual border sides */
+  /* border-top: 5px dashed red; */
+  /* border-bottom: 5px dotted green; */
+
+  border-radius: 10px; /* Try: 0, 5px, 50%, etc. */
+
+  padding: 20px;
+  margin: 20px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.fancy-border {
+  border: 8px double #8e44ad;
+  border-radius: 25px;
+  background-color: #f0eaff;
+  color: #5e2d79;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.center {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.box {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid #333;
+  background-color: #f0f0f0;
+}
+
+.content-box {
+  box-sizing: content-box;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+
+section {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.container {
+  border: 2px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.parent {
+  font-size: 20px;
+  background-color: #f5f5f5;
+  padding: 15px;
+}
+
+.em-example {
+  font-size: 1.5em; /* 1.5 × parent (20px) = 30px */
+  color: blue;
+}
+
+.rem-example {
+  font-size: 1.5rem; /* 1.5 × root (16px) = 24px */
+  color: green;
+}
+
+.percent-example {
+  width: 50%; /* 50% of parent container */
+  background-color: lightcoral;
+  padding: 10px;
+  color: white;
+}

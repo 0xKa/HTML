@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Tables</title>
+  </head>
+  <body
+    style="background-color: rgb(15, 15, 15); color: white; font-size: 20px"
+  >
+    <div id="top">
+      <pre>
+    <h3>HTML Tables</h3>
+        - An HTML table is structured using the &lt;table&GT;&GT; tag and is used to display tabular 
+            data—information presented in a grid of rows and columns.
+        - Tables consist of rows (&lt;tr&GT;), columns (&lt;td&GT; or &lt;th&GT;), 
+            headers, and sometimes grouped sections.
+      
+        </pre>
+      <u>Table Example:</u>
+
+      <div>
+        <table border="1px" style="width: 50%">
+          <caption>
+            Employee Table
+          </caption>
+          <!-- The <caption> tag is used to define a caption (title or summary) for a table and is inserted immediately after the <table> tag. It helps users understand the context and content of the table at a glance. -->
+
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Job</th>
+              <th>Salary</th>
+            </tr>
+          </thead>
+
+          <tfoot>
+            <tr>
+              <td colspan="3" align="center">Total</td>
+              <td>$520000</td>
+            </tr>
+          </tfoot>
+
+          <tbody>
+            <tr>
+              <td>Reda</td>
+              <td>20</td>
+              <td rowspan="2">Software Engineer</td>
+              <td>$100000</td>
+            </tr>
+
+            <tr>
+              <td>Mohammed</td>
+              <td>20</td>
+              <td>$120000</td>
+            </tr>
+            <tr>
+              <td>Khalid</td>
+              <td>30</td>
+              <td>Software Architect</td>
+              <td>$300000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

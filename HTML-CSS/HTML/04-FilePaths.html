@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html file paths</title>
+  </head>
+  <body
+    style="background-color: rgb(15, 15, 15); color: white; font-size: 20px"
+  >
+    <div id="top">
+      <pre>
+  <h3>What are File Paths</h3>
+        A file path in HTML specifies the location of a file within the computer or on a network.
+    This allows HTML documents to locate and access resources like 
+    images, videos, stylesheets, and other HTML pages. 
+    Understanding how to specify these paths correctly is essential 
+    for your web content to load and display correctly.
+    
+    <h4>Types of File Paths
+    </h4>
+    
+<u>Absolute Path:</u>
+    Description: An absolute path points directly to a resource on the internet using a full URL, 
+    which includes the protocol (http:// or https://), domain name, and file structure.
+    Example: https://www.example.com/images/logo.png
+    Usage: Use when referring to resources that are hosted on different 
+    servers or when the absolute reference is necessary.
+
+
+<u>Relative Path:</u>
+    Description: A relative path points to a file relative to the current file's location. 
+    This is more flexible than absolute paths because it changes 
+    contextually based on the location of the HTML file using it.
+    
+    <u>Types:</u>
+
+    <u>Document-relative path:</u> 
+        Links to a file in a directory structure relative to the current document.
+        
+        Example: images/logo.png 
+        (Assuming the image is in the images folder in the same directory as the HTML file)
+
+    <u>Root-relative path:</u>
+        Starts with a slash (/) and links to a file based on the root directory of the site.
+        
+        Example: /images/logo.png 
+        (Useful in larger websites where the directory structure is complex)
+
+
+<u>Using File Paths in HTML</u>
+ 
+    Linking an Image:
+    < img src="images/logo.png" alt="Website Logo">
+         - Here, src uses a relative path to point to an image within the same website.
+
+    Linking a Stylesheet:
+    < link rel="stylesheet" href="/css/styles.css">
+        - href uses a root-relative path to ensure the CSS file can be 
+          consistently accessed from any HTML document within the site.
+
+
+    Linking a JavaScript File:
+    <`script src="../scripts/app.js">< /script>
+        - This example uses a document-relative path that goes up one directory level 
+          (indicated by ../) before accessing the scripts directory.
+        
+<u>Best Practices</u>          
+    - Use relative paths for resources hosted within the same site 
+        to ensure portability and flexibility of the website structure.
+
+    - Use absolute paths for resources from different domains 
+        or when necessary to avoid confusion.
+
+    - Consistently organize files in a logical directory structure
+         to make managing relative paths easier.
+
+    - Test file paths to ensure they reference the correct files,
+         especially after restructuring directories.
+
+    -- Use relative paths during development for flexibility.
+    -- Use root-relative or absolute in production if your site is hosted in a stable structure.
+    </pre>
+    </div>
+  </body>
+</html>
